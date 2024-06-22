@@ -1,10 +1,12 @@
-// /src/pages/Home.jsx
+// /src/components/Card.jsx
 import React from 'react'
+import '../sass/component/_card.scss'
 
-const Card = () => {
+const Card = ({ imageUrl, text }) => {
     return (
-        <div>
-            <p>card</p>
+        <div className="card">
+            <img src={imageUrl} alt="sea" className="card__image" />
+            <div className="card__text">{text}</div>
         </div>
     )
 }

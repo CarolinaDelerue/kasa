@@ -1,0 +1,43 @@
+// /src/sass/component/_card.scss
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la page */
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__text {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le texte */
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  }

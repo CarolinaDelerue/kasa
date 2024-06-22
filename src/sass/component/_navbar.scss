@@ -1,0 +1,60 @@
+// /src/sass/component/_navbar.scss
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .logo img {
+    height: 50px; /* Ajuster la taille de l'image du logo si nécessaire */
+  }
+
+  .navbar_links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar_links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .navbar_links a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .navbar_links {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .navbar_links a {
+      padding: 10px 0;
+      width: 100%;
+      text-align: left;
+    }
+  }

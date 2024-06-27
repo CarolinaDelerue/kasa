@@ -1,18 +1,20 @@
 import React from 'react'
 import Card from '../components/Card'
 import CardLocation from '../components/CardLocation'
-import locations from '../data/locations.json' // Chemin mis à jour
+import locations from '../data/locations.json'
+import '../sass/component/_home.scss' // Assurez-vous que ce fichier est correctement importé
 
 const Home = () => {
     return (
-        <div>
+        <div className="container-home">
             <div>
                 <Card
                     imageUrl="/sea.png"
                     text="Chez vous, partout et ailleurs"
                 />
             </div>
-            <div>
+
+            <div className="container-cardLocation">
                 {locations.map(location => (
                     <CardLocation
                         key={location.id}

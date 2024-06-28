@@ -11,6 +11,7 @@ const Home = () => {
                 <Card
                     imageUrl="/sea.png"
                     text="Chez vous, partout et ailleurs"
+                    height="223px"
                 />
             </div>
 

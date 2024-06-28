@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import locations from '../data/locations.json'
 import Card from '../components/Card'
+import Tag from '../components/Tag'
 
 const LocationDetails = () => {
     const { id } = useParams()
@@ -24,6 +25,11 @@ const LocationDetails = () => {
             <h1>{location.title}</h1>
             <p>{location.location}</p>
             <p>{location.tags}</p>
+            <div className="cardLocation__tags">
+                {location.tags.map((tag, index) => (
+                    <Tag key={index} text={tag} />
+                ))}
+            </div>
         </div>
     )
 }

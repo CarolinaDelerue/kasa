@@ -1,0 +1,18 @@
+// /src/sass/component/_tagRounded.scss
+.tag {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-size: 0.875em;
+    font-weight: 600;
+    background-color: #FF6060;
+    color: #fff;
+    margin: 0.2em;
+    cursor: default;
+    user-select: none;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: #E54949;
+    }
+}

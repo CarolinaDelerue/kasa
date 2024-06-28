@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom'
 import locations from '../data/locations.json'
 import Card from '../components/Card'
 import Tag from '../components/Tag'
+import '../sass/component/_locationDetails.scss'
+import Avatar from '../components/Avatar'
+
 
 const LocationDetails = () => {
     const { id } = useParams()
@@ -16,21 +19,27 @@ const LocationDetails = () => {
     }
 
     return (
-        <div className="locationDetails">
+        <div className="container-locationDetails">
             <Card
                 imageUrl={location.cover}
-                text="Chez vous, partout et ailleurs"
                 height="415px"
             />
-            <h1>{location.title}</h1>
-            <p>{location.location}</p>
-            <p>{location.tags}</p>
-            <div className="cardLocation__tags">
-                {location.tags.map((tag, index) => (
-                    <Tag key={index} text={tag} />
-                ))}
+            <div className="container-details">
+                <div className="container-details-left">
+                    <h1>{location.title}</h1>
+                    <p>{location.location}</p>
+                    <div className="cardLocation__tags">
+                        {location.tags.map((tag, index) => (
+                            <Tag key={index} text={tag} />
+                        ))}
+                    </div>
+                </div>
+                <div className="container-details-right">
+                    <p>{location.host.name}</p>
+                    <Avatar imageUrl={location.host.picture} altText={location.host.name} />
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 

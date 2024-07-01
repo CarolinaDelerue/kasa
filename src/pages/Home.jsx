@@ -19,7 +19,7 @@ const Home = () => {
                 {locations.map(location => (
                     <CardLocation
                         key={location.id}
-                        location={location} // Passez l'objet location complet
+                        location={location}
                     />
                 ))}
             </div>

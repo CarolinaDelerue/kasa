@@ -1,7 +1,7 @@
 // /src/components/Navbar.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../sass/component/_navbar.scss' // Chemin correct vers _navbar.scss
+import '../sass/component/_navbar.scss'
 
 const Navbar = () => {
     return (

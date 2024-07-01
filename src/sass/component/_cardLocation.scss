@@ -1,33 +1,33 @@
 .cardLocation {
-    position: relative;
-    width: 340px;
-    height: 340px;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f8f8;
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
 
-    &__image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-size: cover;
-      background-position: center;
-    }
-
-    &__title {
-      position: absolute;
-      bottom: 10px; /* Ajustez la valeur selon votre design */
-      left: 10px; /* Ajustez la valeur selon votre design */
-      z-index: 1; /* Assurez-vous que le titre reste visible au-dessus de l'image */
-      color: white; /* Changez la couleur selon votre design */
-      text-align: left;
-      padding: 10px;
-      border-radius: 5px;
-    }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
   }
+
+  &__title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}

@@ -1,6 +1,6 @@
 // /src/components/Navbar.jsx
 import React from 'react'
-import '../sass/component/_footer.scss' // Chemin correct vers _navbar.scss
+import '../sass/component/_footer.scss'
 
 const Footer = () => {
     return (

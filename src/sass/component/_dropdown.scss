@@ -1,0 +1,52 @@
+// src/sass/component/_dropdown.scss
+.dropdown {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  &__button {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #ff6060;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+    position: relative;
+
+    &:hover {
+      background-color: #e54949;
+    }
+
+    .dropdown__arrow {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg); // Flèche pointant vers le bas par défaut
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 5px;
+      transition: transform 0.3s;
+    }
+
+    &--open .dropdown__arrow {
+      transform: translateY(-50%) rotate(-135deg); // Flèche pointant vers le haut lorsqu'ouverte
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #666;
+  }
+}

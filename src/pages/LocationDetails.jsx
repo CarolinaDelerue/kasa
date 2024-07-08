@@ -2,11 +2,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import locations from '../data/locations.json'
-import Card from '../components/Card'
 import Tag from '../components/Tag'
 import '../sass/component/_locationDetails.scss'
 import Avatar from '../components/Avatar'
 import Carousel from '../components/Carousel'
+import Dropdown from '../components/Dropdown'
 
 const LocationDetails = () => {
     const { id } = useParams()
@@ -36,6 +36,14 @@ const LocationDetails = () => {
                     <p>{location.host.name}</p>
                     <Avatar imageUrl={location.host.picture} altText={location.host.name} />
                 </div>
+            </div>
+            <div className="container-dropdown">
+                <>
+                    <Dropdown title="Description" content={location.description} />
+                </>
+                <>
+                    <Dropdown title="Equipement" content={location.equipments} />
+                </>
             </div>
         </div>
     )

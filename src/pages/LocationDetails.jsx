@@ -1,3 +1,4 @@
+// src/components/LocationDetails.jsx
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import locations from '../data/locations.json'
@@ -5,13 +6,13 @@ import Card from '../components/Card'
 import Tag from '../components/Tag'
 import '../sass/component/_locationDetails.scss'
 import Avatar from '../components/Avatar'
-
+import Carousel from '../components/Carousel'
 
 const LocationDetails = () => {
     const { id } = useParams()
     console.log('Location ID from URL:', id)
 
-    const location = locations.find(location => location.id === id)
+    const location = locations.find((location) => location.id === id)
     console.log('Matched Location:', location)
 
     if (!location) {
@@ -20,10 +21,7 @@ const LocationDetails = () => {
 
     return (
         <div className="container-locationDetails">
-            <Card
-                imageUrl={location.cover}
-                height="415px"
-            />
+            <Carousel images={location.pictures} />
             <div className="container-details">
                 <div className="container-details-left">
                     <h1>{location.title}</h1>
@@ -39,7 +37,7 @@ const LocationDetails = () => {
                     <Avatar imageUrl={location.host.picture} altText={location.host.name} />
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

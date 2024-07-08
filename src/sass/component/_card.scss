@@ -1,4 +1,3 @@
-// /src/sass/component/_card.scss
 * {
   margin: 0;
   padding: 0;
@@ -29,14 +28,22 @@ body {
     left: 0;
   }
 
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Couche de superposition noire avec opacité
+  }
+
   &__text {
     position: relative;
     z-index: 1;
     color: #fff;
-    font-size: 24px;
+    font-size: 48px;
     font-weight: bold;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 5px;
   }

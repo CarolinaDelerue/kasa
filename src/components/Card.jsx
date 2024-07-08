@@ -6,6 +6,7 @@ const Card = ({ imageUrl, text, height }) => {
         <div className="card" style={{ height: height }}>
             <img src={imageUrl} alt="sea" className="card__image" />
             <div className="card__text">{text}</div>
+            <div className="card__overlay" />
         </div>
     )
 }

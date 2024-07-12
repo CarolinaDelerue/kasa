@@ -48,3 +48,13 @@ body {
     border-radius: 5px;
   }
 }
+
+@media (max-width: 768px) {
+  .card {
+    height: 111px; // Hauteur de la carte en mode mobile
+  }
+
+  .card__text {
+    font-size: 24px; // Taille de la police en mode mobile
+  }
+}

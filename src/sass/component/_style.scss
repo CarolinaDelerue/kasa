@@ -1,0 +1,11 @@
+.global-container {
+  width: 1440px;
+  height: 1472px;
+
+  // Media query pour les appareils mobiles
+  @media (max-width: 768px) {
+    width: 100%; // Utilise 100% de la largeur de l'écran
+    height: auto; // Laisse la hauteur s'ajuster automatiquement
+    padding: 10px; // Ajoute un peu de padding pour l'espacement
+  }
+}

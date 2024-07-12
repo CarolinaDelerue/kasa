@@ -9,14 +9,16 @@ import LocationDetails from './pages/LocationDetails'
 function App () {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/location/:id" element={<LocationDetails />} />
-        </Routes>
-        <Footer />
+      <div className="global-container">
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/location/:id" element={<LocationDetails />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </Router>
   )

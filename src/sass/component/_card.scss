@@ -34,7 +34,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); // Couche de superposition noire avec opacité
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &__text {
@@ -51,10 +51,10 @@ body {
 
 @media (max-width: 768px) {
   .card {
-    height: 111px; // Hauteur de la carte en mode mobile
+    height: 111px;
   }
 
   .card__text {
-    font-size: 24px; // Taille de la police en mode mobile
+    font-size: 24px;
   }
 }

@@ -42,22 +42,22 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: row; /* Assure que le logo et les liens restent sur la même ligne */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Ajuste le padding pour les mobiles */
+    padding: 10px 20px;
   }
 
   .logo img {
-    width: 90px; /* Largeur du logo en mobile */
-    height: 46px; /* Hauteur du logo en mobile */
+    width: 90px;
+    height: 46px;
   }
 
   .navbar_links {
-    gap: 10px; /* Réduit l'espace entre les liens en mobile */
+    gap: 10px;
   }
 
   .navbar_links a {
-    font-size: 12px; /* Taille de la police en mobile */
+    font-size: 12px;
   }
 }

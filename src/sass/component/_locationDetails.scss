@@ -26,6 +26,11 @@ p {
   margin-bottom: 30px;
 }
 
+.cardLocation__tags {
+  display: flex;
+  flex-direction: row;
+}
+
 .container-details-right {
   display: flex;
   flex-direction: row;
@@ -34,4 +39,14 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
   color: #ff6060;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .container-details-left p {
+    font-size: 14px; /* Ajustement de la taille du texte à 14px en mobile */
+  }
 }

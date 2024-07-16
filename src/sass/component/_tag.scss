@@ -1,18 +1,25 @@
-// /src/sass/component/_tagRounded.scss
 .tag {
-    display: inline-block;
-    padding: 0.5em 1em;
-    border-radius: 20px;
-    font-size: 0.875em;
-    font-weight: 600;
-    background-color: #FF6060;
-    color: #fff;
-    margin: 0.2em;
-    cursor: default;
-    user-select: none;
-    transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  border-radius: 20px;
+  font-size: 14px; /* Taille de police par défaut pour les écrans larges */
+  font-weight: 600;
+  background-color: #ff6060;
+  color: #fff;
+  margin: 0.2em;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s, color 0.3s;
+  width: 115px;
+  height: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
-    &:hover {
-        background-color: #E54949;
-    }
+  &:hover {
+    background-color: #e54949;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 10px; /* Ajustement de la taille de la police à 10px pour les mobiles */
+  }
 }

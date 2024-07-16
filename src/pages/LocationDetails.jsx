@@ -8,6 +8,7 @@ import Avatar from '../components/Avatar'
 import Carousel from '../components/Carousel'
 import Dropdown from '../components/Dropdown'
 
+
 const LocationDetails = () => {
     const { id } = useParams()
     console.log('Location ID from URL:', id)
@@ -31,6 +32,7 @@ const LocationDetails = () => {
                             <Tag key={index} text={tag} />
                         ))}
                     </div>
+
                 </div>
                 <div className="container-details-right">
                     <p>{location.host.name}</p>

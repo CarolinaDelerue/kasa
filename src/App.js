@@ -5,6 +5,7 @@ import About from './pages/About'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import LocationDetails from './pages/LocationDetails'
+import './sass/component/_style.scss'
 
 function App () {
   return (
@@ -18,8 +19,9 @@ function App () {
             <Route path="/location/:id" element={<LocationDetails />} />
           </Routes>
         </div>
-        <Footer />
       </div>
+      <Footer />
+
     </Router>
   )
 }

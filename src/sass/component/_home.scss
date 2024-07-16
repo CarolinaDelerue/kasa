@@ -4,16 +4,31 @@
   gap: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+    margin-bottom: 27px;
+    gap: 22px; /* Ajout du gap de 22px en mobile */
+  }
 }
 
 .container-cardLocation {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 20px;
   border-radius: 25px;
   background: #f6f6f6;
   justify-content: center;
   padding: 50px;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes par défaut */
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    padding: 0;
+  }
 }
 
 .container-dropdown {

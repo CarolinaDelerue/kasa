@@ -18,7 +18,8 @@
   &__image {
     width: 100%; /* Ajustement à 100% pour que l'image prenne toute la largeur */
     height: 100%; /* Hauteur à 100% pour remplir l'espace disponible */
-    object-fit: cover; /* Assure que l'image est couverte entièrement */
+    object-fit: cover;/* Assure que l'image est couverte entièrement */
+    border-radius: 10px;
   }
 
   &__button {
@@ -49,13 +50,5 @@
     &__image-container {
       height: 100%; /* Ajustement de la hauteur de l'image container à 100% */
     }
-
-    /* Supprimer le border-radius sur les appareils mobiles */
-    border-radius: 0;
-  }
-
-  @media (min-width: 769px) {
-    /* Appliquer le border-radius uniquement sur les écrans desktop */
-    border-radius: 10px;
   }
 }

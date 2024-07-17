@@ -24,25 +24,29 @@ const LocationDetails = () => {
         <div className="container-locationDetails">
             <Carousel images={location.pictures} />
 
-            <div className="container-heading-avatar">
-                <div className="container-heading">
-                    <h1>{location.title}</h1>
-                    <p>{location.location}</p>
+            <div className="container-infos">
+                <div className="container-heading-tags">
+                    <div className="container-heading">
+                        <h1>{location.title}</h1>
+                        <p>{location.location}</p>
+                    </div>
+                    <div className="cardLocation-tags">
+                        {location.tags.map((tag, index) => (
+                            <Tag key={index} text={tag} />
+                        ))}
+                    </div>
                 </div>
-                <div className="container-avatar">
-                    <p>{location.host.name}</p>
-                    <Avatar imageUrl={location.host.picture} altText={location.host.name} />
+
+
+                <div className="container-avatar-stars">
+                    <div className="container-avatar">
+                        <p>{location.host.name.split(' ')[0]}<br />{location.host.name.split(' ')[1]}</p>
+                        <Avatar imageUrl={location.host.picture} altText={location.host.name} />
+                    </div>
+                    <StarRating location={location} />
                 </div>
             </div>
 
-            <div className="container-tags-stars">
-                <div className="cardLocation-tags">
-                    {location.tags.map((tag, index) => (
-                        <Tag key={index} text={tag} />
-                    ))}
-                </div>
-                <StarRating location={location} />
-            </div>
             <div className="container-dropdown">
                 <Dropdown title="Description" content={location.description} />
                 <Dropdown title="Équipement" content={location.equipments} />

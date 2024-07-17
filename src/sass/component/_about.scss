@@ -2,5 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 38px 0;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 20px; /* Ajustement du gap à 20px pour les mobiles */
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
 }

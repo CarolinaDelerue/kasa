@@ -10,4 +10,10 @@
   .filled {
     color: #ff6060; // Color for filled stars
   }
+
+  @media (max-width: 768px) {
+    .star {
+      font-size: 18px; // Adjust font-size for mobile devices
+    }
+  }
 }

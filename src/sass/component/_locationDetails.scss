@@ -72,6 +72,14 @@ p {
   }
 }
 
+.host {
+  font-size: 18px;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
 .cardLocation-tags {
   display: flex;
   flex-direction: row;
@@ -79,7 +87,7 @@ p {
 
   @media (max-width: 480px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 5px;
   }
 }

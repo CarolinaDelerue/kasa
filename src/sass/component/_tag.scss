@@ -8,7 +8,8 @@
   cursor: default;
   user-select: none;
   transition: background-color 0.3s, color 0.3s;
-  width: 115px;
+  width: 115px; /* Largeur fixe pour le troncage */
+  min-height: 25px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -18,6 +19,7 @@
   }
 
   @media (max-width: 768px) {
-    font-size: 10px; /* Ajustement de la taille de la police à 10px pour les mobiles */
+    font-size: 10px;
+    width: 84px; /* Ajustement de la taille de la police à 10px pour les mobiles */
   }
 }

@@ -8,6 +8,7 @@ import Avatar from '../components/Avatar'
 import Carousel from '../components/Carousel'
 import Dropdown from '../components/Dropdown'
 import StarRating from '../components/StarRating'
+import NotFound from '../components/NotFound'
 
 const LocationDetails = () => {
     const { id } = useParams()
@@ -17,7 +18,7 @@ const LocationDetails = () => {
     console.log('Matched Location:', location)
 
     if (!location) {
-        return <h2>Location not found</h2>
+        return <NotFound />
     }
 
     return (
@@ -40,7 +41,7 @@ const LocationDetails = () => {
 
                 <div className="container-avatar-stars">
                     <div className="container-avatar">
-                        <p>{location.host.name.split(' ')[0]}<br />{location.host.name.split(' ')[1]}</p>
+                        <p className="host">{location.host.name.split(' ')[0]}<br />{location.host.name.split(' ')[1]}</p>
                         <Avatar imageUrl={location.host.picture} altText={location.host.name} />
                     </div>
                     <StarRating location={location} />

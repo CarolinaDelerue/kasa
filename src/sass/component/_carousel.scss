@@ -16,7 +16,7 @@
   }
 
   &__image {
-    width: auto; /* Ajustement à 'auto' pour que l'image respecte les proportions */
+    width: 100%; /* Ajustement à 100% pour que l'image prenne toute la largeur */
     height: 100%; /* Hauteur à 100% pour remplir l'espace disponible */
     object-fit: cover; /* Assure que l'image est couverte entièrement */
   }

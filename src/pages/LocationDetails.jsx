@@ -7,7 +7,7 @@ import '../sass/component/_locationDetails.scss'
 import Avatar from '../components/Avatar'
 import Carousel from '../components/Carousel'
 import Dropdown from '../components/Dropdown'
-
+import StarRating from '../components/StarRating'
 
 const LocationDetails = () => {
     const { id } = useParams()
@@ -23,29 +23,29 @@ const LocationDetails = () => {
     return (
         <div className="container-locationDetails">
             <Carousel images={location.pictures} />
-            <div className="container-details">
-                <div className="container-details-left">
+
+            <div className="container-heading-avatar">
+                <div className="container-heading">
                     <h1>{location.title}</h1>
                     <p>{location.location}</p>
-                    <div className="cardLocation__tags">
-                        {location.tags.map((tag, index) => (
-                            <Tag key={index} text={tag} />
-                        ))}
-                    </div>
-
                 </div>
-                <div className="container-details-right">
+                <div className="container-avatar">
                     <p>{location.host.name}</p>
                     <Avatar imageUrl={location.host.picture} altText={location.host.name} />
                 </div>
             </div>
+
+            <div className="container-tags-stars">
+                <div className="cardLocation-tags">
+                    {location.tags.map((tag, index) => (
+                        <Tag key={index} text={tag} />
+                    ))}
+                </div>
+                <StarRating location={location} />
+            </div>
             <div className="container-dropdown">
-                <>
-                    <Dropdown title="Description" content={location.description} />
-                </>
-                <>
-                    <Dropdown title="Equipement" content={location.equipments} />
-                </>
+                <Dropdown title="Description" content={location.description} />
+                <Dropdown title="Équipement" content={location.equipments} />
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../components/Card'
 import CardLocation from '../components/CardLocation'
 import locations from '../data/locations.json'
-import '../sass/component/_home.scss' // Assurez-vous que ce fichier est correctement importé
+import '../sass/component/_home.scss'
 
 const Home = () => {
     return (

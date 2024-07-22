@@ -1,4 +1,3 @@
-// src/components/Carousel.jsx
 import React, { useState } from 'react'
 import '../sass/component/_carousel.scss'
 

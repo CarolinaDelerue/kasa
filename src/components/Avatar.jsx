@@ -1,4 +1,3 @@
-// /src/components/Avatar.jsx
 import React from 'react'
 import '../sass/component/_avatar.scss'
 

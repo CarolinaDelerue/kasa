@@ -1,4 +1,3 @@
-// src/components/LocationDetails.jsx
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import locations from '../data/locations.json'

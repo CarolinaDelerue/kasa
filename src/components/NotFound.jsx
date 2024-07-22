@@ -1,8 +1,6 @@
-// src/components/NotFound.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../sass/component/_notFound.scss' // Assurez-vous de créer un fichier SCSS pour les styles de la page 404
-
+import '../sass/component/_notFound.scss'
 const NotFound = () => {
     return (
         <div className="not-found">

@@ -5,13 +5,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  // Media query pour les tablettes et les petits écrans
   @media (max-width: 1024px) {
     padding-left: 50px;
     padding-right: 50px;
   }
 
-  // Media query pour les appareils mobiles
   @media (max-width: 768px) {
     width: 100%;
     height: auto;

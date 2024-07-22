@@ -1,5 +1,5 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import locations from '../data/locations.json'
 import Tag from '../components/Tag'
 import '../sass/component/_locationDetails.scss'
@@ -7,23 +7,26 @@ import Avatar from '../components/Avatar'
 import Carousel from '../components/Carousel'
 import Dropdown from '../components/Dropdown'
 import StarRating from '../components/StarRating'
-import NotFound from '../components/NotFound'
 
 const LocationDetails = () => {
+    const [location, setLocation] = useState({})
     const { id } = useParams()
-    console.log('Location ID from URL:', id)
+    const navigate = useNavigate()
 
-    const location = locations.find((location) => location.id === id)
-    console.log('Matched Location:', location)
+    useEffect(() => {
+        const foundLocation = locations.find((location) => location.id === id)
+        if (!foundLocation) {
+            navigate('/404')
+        } else {
+            setLocation(foundLocation)
+        }
+    }, [id, navigate])
 
-    if (!location) {
-        return <NotFound />
-    }
+    if (!Object.keys(location).length) return <>Loading...</>
 
     return (
         <div className="container-locationDetails">
             <Carousel images={location.pictures} />
-
             <div className="container-infos">
                 <div className="container-heading-tags">
                     <div className="container-heading">
@@ -36,8 +39,6 @@ const LocationDetails = () => {
                         ))}
                     </div>
                 </div>
-
-
                 <div className="container-avatar-stars">
                     <div className="container-avatar">
                         <p className="host">{location.host.name.split(' ')[0]}<br />{location.host.name.split(' ')[1]}</p>
@@ -46,7 +47,6 @@ const LocationDetails = () => {
                     <StarRating location={location} />
                 </div>
             </div>
-
             <div className="container-dropdown">
                 <Dropdown title="Description" content={location.description} />
                 <Dropdown title="Équipement" content={location.equipments} />

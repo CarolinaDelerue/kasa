@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import NotFound from './components/NotFound'
 import LocationDetails from './pages/LocationDetails'
 import './sass/component/_style.scss'
 
@@ -17,6 +18,7 @@ function App () {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/location/:id" element={<LocationDetails />} />
+            <Route path="/404" element={<NotFound />} />
           </Routes>
         </div>
       </div>

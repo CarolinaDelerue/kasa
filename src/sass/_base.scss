@@ -1,10 +1,22 @@
+/* Appliquer Montserrat globalement */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Appliquer Montserrat aux éléments de code */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: 'Montserrat', monospace;
+}
+
+/* Forcer Montserrat sur le dropdown */
+.dropdown {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Si le dropdown a des éléments enfants spécifiques */
+.dropdown * {
+  font-family: 'Montserrat', sans-serif !important;
 }

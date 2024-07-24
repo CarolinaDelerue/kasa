@@ -1,14 +1,14 @@
 .tag {
   display: flex;
   border-radius: 20px;
-  font-size: 14px; /* Taille de police par défaut pour les écrans larges */
+  font-size: 14px;
   font-weight: 600;
   background-color: #ff6060;
   color: #fff;
   cursor: default;
   user-select: none;
   transition: background-color 0.3s, color 0.3s;
-  width: 115px; /* Largeur fixe pour le troncage */
+  width: 115px;
   min-height: 25px;
   text-align: center;
   justify-content: center;
@@ -20,6 +20,6 @@
 
   @media (max-width: 768px) {
     font-size: 10px;
-    width: 84px; /* Ajustement de la taille de la police à 10px pour les mobiles */
+    width: 84px;
   }
 }

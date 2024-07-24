@@ -1,2 +1,19 @@
-@import "base";
-@import "component/navbar";
+// Importer les styles de base
+@import 'base';
+
+// Importer les composants
+@import 'component/avatar';
+@import 'component/card';
+@import 'component/cardLocation';
+@import 'component/carousel';
+@import 'component/dropdown';
+@import 'component/footer';
+@import 'component/navbar';
+@import 'component/notFound';
+@import 'component/starRating';
+@import 'component/tag';
+
+// Importer les pages
+@import 'component/about';
+@import 'component/home';
+@import 'component/locationDetails';

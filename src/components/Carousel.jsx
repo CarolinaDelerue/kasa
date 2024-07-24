@@ -14,15 +14,24 @@ const Carousel = ({ images }) => {
 
     return (
         <div className="carousel">
-            <button className="carousel__button carousel__button--prev" onClick={handlePrevClick}>
-                &lt;
-            </button>
+            {images.length > 1 && (
+                <button className="carousel__button carousel__button--prev" onClick={handlePrevClick}>
+                    &lt;
+                </button>
+            )}
             <div className="carousel__image-container">
                 <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="carousel__image" />
             </div>
-            <button className="carousel__button carousel__button--next" onClick={handleNextClick}>
-                &gt;
-            </button>
+            {images.length > 1 && (
+                <button className="carousel__button carousel__button--next" onClick={handleNextClick}>
+                    &gt;
+                </button>
+            )}
+            {images.length > 1 && (
+                <div className="carousel__counter">
+                    {currentIndex + 1}/{images.length}
+                </div>
+            )}
         </div>
     )
 }
